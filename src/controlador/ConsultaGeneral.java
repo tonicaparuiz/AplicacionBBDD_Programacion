@@ -15,7 +15,7 @@ public class ConsultaGeneral {
 			Statement s = con.createStatement();
 			instabla = "SELECT * FROM `city`";
 			s.execute(instabla);
-			System.out.println("[Mostrando datos de tabla city]");
+			System.out.println(s);
 		} catch (SQLException e) {
 			System.err.println("[Error al mostrar los datos]");
 		} finally {

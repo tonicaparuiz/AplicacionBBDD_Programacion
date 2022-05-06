@@ -1,13 +1,16 @@
-package controlador;
+package principal;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import controlador.ConsultaDeter;
+import controlador.ConsultaGeneral;
+
 public class MenuPrincipal {
 
 	public static void main(String[] args) {
-		ConsultaGeneral cons = new ConsultaGeneral();
-		Scanner scan = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+
 		int ejer = 1;
 		int num1 = 0, num2 = 0, num3 = 0;
 		while (ejer != 0) {
@@ -20,17 +23,22 @@ public class MenuPrincipal {
 								+ "(4). Actualizacion de registro  \r\n"
 								+ "(5). Eliminacion de registro \r\n" 
 								+ "(0). Salir de la aplicacion ");
-				ejer = scan.nextInt();
+				ejer = scanner.nextInt();
 
 				switch (ejer) {
 				case 1:
 
 					break;
 				case 2:
+					ConsultaGeneral cons = new ConsultaGeneral();
 					cons.consultaGeneral();
 					break;
 				case 3:
-
+					int x;
+					System.out.println("Por favor añada el id de la ciudad a revisar");
+					x=scanner.nextInt();
+					ConsultaDeter consdeter = new ConsultaDeter();
+					consdeter.selectorCiudad(x);
 					break;
 				case 4:
 
@@ -51,7 +59,6 @@ public class MenuPrincipal {
 				break;
 			}
 		}
-		scan.close();
 
 	}
 

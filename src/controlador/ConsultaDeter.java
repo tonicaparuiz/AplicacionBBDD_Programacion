@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConsultaDeter {
-	
+
 	private static String seleccion = "SELECT * FROM `city` WHERE ID = ?";
 
 	public void selectorCiudad(int idCiudad) {
@@ -33,11 +33,11 @@ public class ConsultaDeter {
 			}
 
 		} catch (SQLException e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
 
 	}
-	
+
 }

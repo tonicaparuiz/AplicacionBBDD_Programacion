@@ -21,7 +21,7 @@ public class ConexionMySql {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} 
+		}
 
 		return con;
 	}
@@ -33,7 +33,6 @@ public class ConexionMySql {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 
 	}
 
