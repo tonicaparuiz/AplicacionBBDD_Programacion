@@ -36,6 +36,8 @@ public class ConsultaDeter {
 
 			e.printStackTrace();
 
+		} finally {
+			conexion.desconectar(con);
 		}
 
 	}
